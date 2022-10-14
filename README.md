@@ -9,14 +9,26 @@ I know in this particular example I could just rewrite the type declaration as `
 
 I've spent hours now digging through google searches, jsdoc.app docs, forum posts, etc... and nothing has helped so far. Surely there has to just be some config option I've missed that will address this?
 
-here's the error:
+here's an example error:
 ```bash
-[vite] Internal server error: Failed to parse source for import analysis because the content contains invalid JS syntax. If you are using JSX, make sure to name the file with the .jsx or .tsx extension.
+12:11:36 p.m. [vite] Internal server error: Failed to parse source for import analysis because the content contains invalid JS syntax. If you are using JSX, make sure to name the file with the .jsx or .tsx extension.
   Plugin: vite:import-analysis
+  File: /Users/gopher/Code/[redacted]/src/components/molecules/openHours/index.vue?vue&type=yyyyddmm&index=0&lang.yyyyddmm
+  1  |  : { openTime: <hhmm>, closeTime: <hhmm> }
+  2  |       *     ...
+  3  |       *   }
+     |           ^
+  4  |       * }
+  5  |       *
+      at formatError (file:///Users/gopher/Code/[redacted]/node_modules/vite/dist/node/chunks/dep-4da11a5e.js:40862:46)
+      at TransformContext.error (file:///Users/gopher/Code/[redacted]/node_modules/vite/dist/node/chunks/dep-4da11a5e.js:40858:19)
+      at TransformContext.transform (file:///Users/gopher/Code/[redacted]/node_modules/vite/dist/node/chunks/dep-4da11a5e.js:37530:22)
+      at async Object.transform (file:///Users/gopher/Code/[redacted]/node_modules/vite/dist/node/chunks/dep-4da11a5e.js:41111:30)
+      at async loadAndTransform (file:///Users/gopher/Code/[redacted]/node_modules/vite/dist/node/chunks/dep-4da11a5e.js:37373:29)
 ```
 
 ## Note:
-This reproduction is stuck at the moment, because storybook can't seem to find my stories. But I'm too braindead and frustrated at the moment to get it across the finish line.
+This reproduction is stuck at the moment, because storybook can't seem to find my stories. But I'm too braindead and frustrated to get it across the finish line.
 
 ## Packge Versions:
 - Vue@2.7

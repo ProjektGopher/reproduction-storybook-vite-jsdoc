@@ -9,8 +9,8 @@ I know in this particular example I could just rewrite the type declaration as `
 
 I've spent hours now digging through google searches, jsdoc.app docs, forum posts, etc... and nothing has helped so far. Surely there has to just be some config option I've missed that will address this?
 
-## Note:
-This reproduction is stuck at the moment, because storybook can't seem to find my stories. But I'm too braindead and frustrated to get it across the finish line.
+## WIP
+I haven't yet actually finished reproducing the error. Will finish on Monday
 
 ## Packge Versions:
 - Vue@2.7
